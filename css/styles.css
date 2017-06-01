@@ -1,0 +1,17 @@
+#letter {
+  display: none;
+}
+
+.button {
+  /*margin: 1000px;
+  padding: 100px;*/
+}
+
+.jumbotron {
+  display: none;
+  margin: 200px;
+}
+
+.container {
+  /*float: left;
+}*/
