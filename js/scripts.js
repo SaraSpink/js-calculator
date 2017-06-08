@@ -16,20 +16,30 @@ var divide = function(num1, num2) {
 
 
 $(document).ready(function() {
-  $("form#add").submit(function(event) {
+  $("form#calculator").submit(function() {
     event.preventDefault();
-    var num1 = parseInt($("#add1").val());
-    var num2 = parseInt($("#add2").val());
-    var result = add(num1, num2);
-    
-    $("#output").text(result);
-  });
+    var num1 = parseInt($("#input1").val());
+    var num2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    var result;
+    if (operator === "add") {
+      result = add(num1, num2);
+    } else if (operator === "subtract") {
+      result = subtract(num1, num2);
+    } else if (operator === "multiply") {
+      result = multiply(num1, num2);
+    } else if (operator === "divide") {
+      result = divide(num1, num2);
+    }
+console.log("first number: " + num1);
+console.log("second number: " + num2);
+console.log("operator: " + operator);
+console.log("results: " + result);
+    if (result === 80085) {
+      result = "80085, or BOOBS (. )( .)";
 
-  $("form#subtract").submit(function(event) {
-    event.preventDefault();
-    var num1 = parseInt($("#subtract1").val());
-    var num2 = parseInt($("#subtract2").val());
-    var result = subtract(num1, num2);
+    }
     $("#output").text(result);
+
   });
 });
