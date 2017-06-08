@@ -31,10 +31,7 @@ $(document).ready(function() {
     } else if (operator === "divide") {
       result = divide(num1, num2);
     }
-console.log("first number: " + num1);
-console.log("second number: " + num2);
-console.log("operator: " + operator);
-console.log("results: " + result);
+
     if (result === 80085) {
       result = "80085, or BOOBS (. )( .)";
 
